@@ -22,7 +22,8 @@ Zalo cung cấp một đoạn mã HTML/JavaScript để bạn chèn vào website
 
 - Lấy đoạn mã nhúng (thường có dạng):
 
-```<div class="zalo-chat-widget" 
+```
+<div class="zalo-chat-widget" 
     data-oaid="YOUR_OA_ID" 
     data-welcome-message="Rất vui khi được hỗ trợ bạn!"
     data-autopopup="0" 
