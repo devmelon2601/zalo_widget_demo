@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zalo Widget Demo</title>
+    <!-- Thêm Tailwind CSS qua CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        zalo: '#0068ff',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="bg-slate-50 min-h-screen flex flex-col font-sans text-slate-800">
+
+    <!-- Header -->
+    <header class="bg-white shadow-sm sticky top-0 z-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center gap-2">
+                    <div
+                        class="w-8 h-8 bg-zalo rounded-lg flex items-center justify-center text-white font-bold text-xl">
+                        Z</div>
+                    <span class="font-bold text-xl text-slate-900">Demo Store</span>
+                </div>
+                <nav class="hidden md:flex space-x-8">
+                    <a href="#" class="text-slate-600 hover:text-zalo transition-colors font-medium">Trang chủ</a>
+                    <a href="#" class="text-slate-600 hover:text-zalo transition-colors font-medium">Sản phẩm</a>
+                    <a href="#" class="text-slate-600 hover:text-zalo transition-colors font-medium">Về chúng tôi</a>
+                    <a href="#" class="text-slate-600 hover:text-zalo transition-colors font-medium">Liên hệ</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <main class="flex-grow">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+            <div class="text-center max-w-3xl mx-auto">
+                <h1 class="text-4xl md:text-5xl font-extrabold text-slate-900 mb-6 tracking-tight">
+                    Chào mừng bạn đến với trang demo <span class="text-zalo">Zalo Widget</span>
+                </h1>
+                <p class="text-lg text-slate-600 mb-10 leading-relaxed">
+                    Đây là một giao diện mẫu được xây dựng bằng Tailwind CSS để bạn có thể dễ dàng chèn mã nhúng của
+                    Zalo Widget vào và xem thử cách nó hoạt động trên một trang web thực tế.
+                </p>
+                <div class="flex justify-center gap-4">
+                    <a href="#"
+                        class="px-8 py-3 bg-zalo text-white rounded-full font-semibold hover:bg-blue-700 transition-colors shadow-lg shadow-blue-500/30">
+                        Khám phá ngay
+                    </a>
+                    <a href="#"
+                        class="px-8 py-3 bg-white text-slate-700 border border-slate-200 rounded-full font-semibold hover:bg-slate-50 transition-colors">
+                        Tìm hiểu thêm
+                    </a>
+
+                </div>
+            </div>
+
+            <!-- Features Grid -->
+            <div class="grid md:grid-cols-3 gap-8 mt-24">
+                <div
+                    class="bg-white p-8 rounded-2xl shadow-sm border border-slate-100 hover:shadow-md transition-shadow">
+                    <div
+                        class="w-12 h-12 bg-blue-50 text-zalo rounded-xl flex items-center justify-center mb-6 text-2xl">
+                        🚀
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Tích hợp nhanh chóng</h3>
+                    <p class="text-slate-600">Chỉ cần copy và paste đoạn mã widget vào thẻ body là có thể sử dụng ngay
+                        lập tức.</p>
+                </div>
+                <div
+                    class="bg-white p-8 rounded-2xl shadow-sm border border-slate-100 hover:shadow-md transition-shadow">
+                    <div
+                        class="w-12 h-12 bg-blue-50 text-zalo rounded-xl flex items-center justify-center mb-6 text-2xl">
+                        💬
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Hỗ trợ khách hàng</h3>
+                    <p class="text-slate-600">Tương tác trực tiếp với khách hàng của bạn qua Zalo OA một cách thuận
+                        tiện.</p>
+                </div>
+                <div
+                    class="bg-white p-8 rounded-2xl shadow-sm border border-slate-100 hover:shadow-md transition-shadow">
+                    <div
+                        class="w-12 h-12 bg-blue-50 text-zalo rounded-xl flex items-center justify-center mb-6 text-2xl">
+                        🎨
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Giao diện hiện đại</h3>
+                    <p class="text-slate-600">Được thiết kế sẵn với Tailwind CSS, tối ưu hiển thị trên cả máy tính và
+                        điện thoại.</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-white border-t border-slate-200 py-8 mt-auto">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-slate-500">
+            <p>&copy; 2026 Zalo Widget Demo. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- ============================================== -->
+    <!-- DÁN MÃ NHÚNG ZALO WIDGET CỦA BẠN VÀO BÊN DƯỚI -->
+    <!-- ============================================== -->
+
+    <div class="zalo-chat-widget" data-oaid="2163682574717543785" data-welcome-message="Rất vui khi được hỗ trợ bạn!"
+        data-autopopup="0" data-width="300" data-height="300"></div>
+    <script src="https://sp.zalo.me/plugins/sdk.js"></script>
+
+    <!-- Ví dụ:
+    <div class="zalo-chat-widget" data-oaid="YOUR_OA_ID" data-welcome-message="Rất vui khi được hỗ trợ bạn!" data-autopopup="0" data-width="" data-height=""></div>
+    <script src="https://sp.zalo.me/plugins/sdk.js"></script>
+    -->
+
+</body>
+
+</html>
